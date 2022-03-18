@@ -16,7 +16,8 @@ public class FeignRequestConfig implements RequestInterceptor {
     @Override
     public void apply(RequestTemplate requestTemplate) {
 
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        ServletRequestAttributes attributes = (ServletRequestAttributes)
+                RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
 
         log.info("TokenTemplate: " + request.getHeader(HttpHeaders.AUTHORIZATION));

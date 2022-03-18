@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "rest-client", url = "http://pruebas.gestora.bo/servicios/persona/api/v1")
+@FeignClient(name = "rest-client", url = "https://pruebas.gestora.bo/servicios/persona/api/v1")
 public interface CallRestClient {
 
     @PostMapping(value = "/consulta",
